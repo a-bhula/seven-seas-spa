@@ -21,12 +21,12 @@
         .navbar-custom .nav-link.active {
             font-weight: bold;
         }
-
-        .navbar {
+                                                                                                         /*  */
+        /* .navbar {
             position: sticky;
             top: 0;
             z-index: 1000;
-        } 
+        }  */
 
         .hero-section {
         background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/images/hero-image.png') no-repeat
@@ -43,6 +43,30 @@
         .btn {
         color: #3B2F2F;
         }
+
+
+        /* Service cards styling */
+        .card {
+            border: none;
+        }
+    
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+    
+        /* Testimonial images sizing */
+        .testimonial-image {
+            width: 100px;
+            height: 100px;
+        }
+    
+        /* Rounded corners on images with the 'rounded-image' class. The px value sets roundness */
+        .rounded-image {
+            border-radius: 15px;
+            
+        }
+
     </style>
 </head>
 
@@ -88,6 +112,7 @@
 <!-- Main Section -->
 <main class="container my-5">
     <div class="container">
+
         <!-- Our Services Section -->
         <section class="my-5">
             <h2 class="display-5">Our Services</h2>
@@ -131,6 +156,7 @@
                 </div>
             </div>
         </section>
+
         <!-- Wellness Tips Section -->
         <section class="my-5">
             <h2 class="display-5">Wellness Tips</h2>
@@ -145,6 +171,48 @@
         </section>
 
         <!-- Testimonial Section -->
+        <section class="my-5">
+            <h2 class="display-5">Testimonials</h2>
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" role="region"
+                aria-label="Testimonials" tabindex="0">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="testimonial text-center">
+                            <img src="assets/images/testimonial1.png" alt="Profile Picture of Jane Doe"
+                                class="rounded-circle mb-3 testimonial-image">
+                            <p>"I have been a loyal customer of Seven Seas Spa for many years, and the experience is consistently exceptional. The staff is welcoming and highly skilled, and the services are outstanding."</p>
+                            <p>- Sarah Williams</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial text-center">
+                            <img src="assets/images/testimonial2.png" alt="Profile Picture of John Smith"
+                                class="rounded-circle mb-3 testimonial-image">
+                            <p>"The wellness programs at Seven Seas Spa have significantly enhanced my health and overall wellbeing. I highly recommend their services."</p>
+                            <p>- Jonathan Smith</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial text-center">
+                            <img src="assets/images/testimonial3.png" alt="Profile Picture of Emilty Johnson"
+                                class="rounded-circle mb-3 testimonial-image">
+                            <p>"The spa treatments at Seven Seas Spa are unparalleled. I always leave feeling revitalized and rejuvenated."</p>
+                            <p>- Emma Johnson</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
 
     </div>
 </main>
