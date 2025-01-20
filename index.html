@@ -8,11 +8,17 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
     <!-- Bootstrap 5 CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
 
     <title>Seven Seas Spa</title>
-    
+
     <style>
+        /* Handlee font to all headings */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Handlee', cursive;
+        }
+
         .navbar-custom {
             color: #3B2F2F;
         }
@@ -24,27 +30,39 @@
         .navbar-custom .nav-link.active {
             font-weight: bold;
         }
-                                                                                                         
+
+        /* Sticky navbar */
         .navbar {
             position: sticky;
             top: 0;
             z-index: 1000;
-        } 
+        }
 
+        /* Hero section styling */
         .hero-section {
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/images/hero-image.png') no-repeat
-        center center;
-        background-size: cover;
-        color: #FFEBD4;
-        padding: 100px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/images/hero-image.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #FFEBD4;
+            padding: 8rem 0;
         }
 
-        .hero-section h1 {
-        font-family: 'Handlee', cursive;
+        body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
         }
 
-        .btn {
-        color: #3B2F2F;
+            /* .btn {
+                color: #3B2F2F;
+            } */
+        
+        /*
+        This CSS rule adds padding to the left and right of the body and main elements
+        This ensures that the content is not right up against the viewport on small screens. */
+        main {
+        margin: 2rem 0;
         }
 
         /* Footer styling */
@@ -59,24 +77,23 @@
         .card {
             border: none;
         }
-    
+
         .card-img-top {
             height: 200px;
             object-fit: cover;
         }
-    
+
         /* Testimonial images sizing */
         .testimonial-image {
             width: 100px;
             height: 100px;
         }
-    
+
         /* Rounded corners on images with the 'rounded-image' class. The px value sets roundness */
         .rounded-image {
             border-radius: 15px;
-            
-        }
 
+        }
     </style>
 </head>
 
@@ -111,7 +128,7 @@
     </nav>
 
 
-<!-- Hero Section -->
+    <!-- Hero Section -->
     <div class="container-fluid hero-section text-center">
         <h1 class="display-4">Welcome to Seven Seas Spa</h1>
         <p class="lead">We are dedicated to improving your overall wellbeing.</p>
@@ -119,137 +136,151 @@
     </div>
 
 
-<!-- Main Section -->
-<main class="container my-5">
-    <div class="container">
+    <!-- Main Section -->
+    <main class="container my-5">
+        <div class="container">
 
-        <!-- Our Services Section -->
-        <section class="my-5">
-            <h2 class="display-5">Our Services</h2>
-            <div class="row">
-                <div class="col-lg-3 col-md-6 mb-4 d-flex align-items-stretch">
-                    <div class="card shadow" tabindex="0">
-                        <img src="assets/images/yoga.png" alt="Yoga Class" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Yoga Classes</h5>
-                            <p class="card-text">Enhance your flexibility and alleviate stress through our yoga classes.
-                            </p>
+            <!-- Our Services Section -->
+            <section class="my-5">
+                <h2 class="display-5">Our Services</h2>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 mb-4 d-flex align-items-stretch">
+                        <div class="card shadow" tabindex="0">
+                            <img src="assets/images/yoga.png" alt="Yoga Class" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Yoga Classes</h5>
+                                <p class="card-text">Enhance your flexibility and alleviate stress through our yoga
+                                    classes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4 d-flex align-items-stretch">
+                        <div class="card shadow" tabindex="0">
+                            <img src="assets/images/nutrition.png" alt="Nutritional Advice" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Nutritional Advice</h5>
+                                <p class="card-text">Receive tailored nutritional guidance to improve your eating
+                                    habits.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4 d-flex align-items-stretch">
+                        <div class="card shadow" tabindex="0">
+                            <img src="assets/images/mental_health.png" class="card-img-top" alt="Mental Health">
+                            <div class="card-body">
+                                <h5 class="card-title">Mental Health Support</h5>
+                                <p class="card-text">Access our resources and support to maintain and improve your
+                                    mental health.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4 d-flex align-items-stretch">
+                        <div class="card shadow" tabindex="0">
+                            <img src="assets/images/wellness.png" class="card-img-top" alt="Wellness Programs">
+                            <div class="card-body">
+                                <h5 class="card-title">Wellness Programs</h5>
+                                <p class="card-text">Participate in our wellness programs to enhance your health and
+                                    overall wellbeing.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-4 d-flex align-items-stretch">
-                    <div class="card shadow" tabindex="0">
-                        <img src="assets/images/nutrition.png" alt="Nutritional Advice" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Nutritional Advice</h5>
-                            <p class="card-text">Receive tailored nutritional guidance to improve your eating habits.</p>
+            </section>
+
+            <!-- Wellness Tips Section -->
+            <section class="my-5">
+                <h2 class="display-5">Wellness Tips</h2>
+                <p>Adopting a healthy lifestyle can be easy. Here are some straightforward tips to enhance your overall
+                    wellbeing:</p>
+                <ul>
+                    <li><strong>Stay Active:</strong> Engaging in regular physical activities can boost your mood and
+                        alleviate anxiety.</li>
+                    <li><strong>Eat Healthy:</strong> Consuming a balanced diet helps maintain a healthy weight and
+                        lowers the risk of chronic illnesses.</li>
+                    <li><strong>Get Enough Sleep:</strong> Quality sleep is crucial for both physical health and mental
+                        wellbeing.</li>
+                    <li><strong>Manage Stress:</strong> Practices like meditation and deep breathing can aid in stress
+                        management and enhance mental health.</li>
+                    <li><strong>Stay Hydrated:</strong> Adequate water intake can elevate your energy levels and improve
+                        brain function.</li>
+                </ul>
+            </section>
+
+            <!-- Testimonial Section -->
+            <section class="my-5">
+                <h2 class="display-5">Testimonials</h2>
+                <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" role="region"
+                    aria-label="Testimonials" tabindex="0">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="testimonial text-center">
+                                <img src="assets/images/testimonial1.png" alt="Profile Picture of Sarah Williams"
+                                    class="rounded-circle mb-3 testimonial-image">
+                                <p>"I have been a loyal customer of Seven Seas Spa for many years, and the experience is
+                                    consistently exceptional. The staff is welcoming and highly skilled, and the
+                                    services are outstanding."</p>
+                                <p>- Sarah Williams</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonial text-center">
+                                <img src="assets/images/testimonial2.png" alt="Profile Picture of Jonathan Smith"
+                                    class="rounded-circle mb-3 testimonial-image">
+                                <p>"The wellness programs at Seven Seas Spa have significantly enhanced my health and
+                                    overall wellbeing. I highly recommend their services."</p>
+                                <p>- Jonathan Smith</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonial text-center">
+                                <img src="assets/images/testimonial3.png" alt="Profile Picture of Emma Johnson"
+                                    class="rounded-circle mb-3 testimonial-image">
+                                <p>"The spa treatments at Seven Seas Spa are unparalleled. I always leave feeling
+                                    revitalized and rejuvenated."</p>
+                                <p>- Emma Johnson</p>
+                            </div>
                         </div>
                     </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-4 d-flex align-items-stretch">
-                    <div class="card shadow" tabindex="0">
-                        <img src="assets/images/mental_health.png" class="card-img-top" alt="Mental Health">
-                        <div class="card-body">
-                            <h5 class="card-title">Mental Health Support</h5>
-                            <p class="card-text">Access our resources and support to maintain and improve your mental health.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 d-flex align-items-stretch">
-                    <div class="card shadow" tabindex="0">
-                        <img src="assets/images/wellness.png" class="card-img-top" alt="Wellness Programs">
-                        <div class="card-body">
-                            <h5 class="card-title">Wellness Programs</h5>
-                            <p class="card-text">Participate in our wellness programs to enhance your health and overall wellbeing.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Wellness Tips Section -->
-        <section class="my-5">
-            <h2 class="display-5">Wellness Tips</h2>
-            <p>Adopting a healthy lifestyle can be easy. Here are some straightforward tips to enhance your overall wellbeing:</p>
-            <ul>
-                <li><strong>Stay Active:</strong> Engaging in regular physical activities can boost your mood and alleviate anxiety.</li>
-                <li><strong>Eat Healthy:</strong> Consuming a balanced diet helps maintain a healthy weight and lowers the risk of chronic illnesses.</li>
-                <li><strong>Get Enough Sleep:</strong> Quality sleep is crucial for both physical health and mental wellbeing.</li>
-                <li><strong>Manage Stress:</strong> Practices like meditation and deep breathing can aid in stress management and enhance mental health.</li>
-                <li><strong>Stay Hydrated:</strong> Adequate water intake can elevate your energy levels and improve brain function.</li>
-            </ul>
-        </section>
+        </div>
+    </main>
 
-        <!-- Testimonial Section -->
-        <section class="my-5">
-            <h2 class="display-5">Testimonials</h2>
-            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" role="region"
-                aria-label="Testimonials" tabindex="0">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="testimonial text-center">
-                            <img src="assets/images/testimonial1.png" alt="Profile Picture of Sarah Williams"
-                                class="rounded-circle mb-3 testimonial-image">
-                            <p>"I have been a loyal customer of Seven Seas Spa for many years, and the experience is consistently exceptional. The staff is welcoming and highly skilled, and the services are outstanding."</p>
-                            <p>- Sarah Williams</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="testimonial text-center">
-                            <img src="assets/images/testimonial2.png" alt="Profile Picture of Jonathan Smith"
-                                class="rounded-circle mb-3 testimonial-image">
-                            <p>"The wellness programs at Seven Seas Spa have significantly enhanced my health and overall wellbeing. I highly recommend their services."</p>
-                            <p>- Jonathan Smith</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="testimonial text-center">
-                            <img src="assets/images/testimonial3.png" alt="Profile Picture of Emma Johnson"
-                                class="rounded-circle mb-3 testimonial-image">
-                            <p>"The spa treatments at Seven Seas Spa are unparalleled. I always leave feeling revitalized and rejuvenated."</p>
-                            <p>- Emma Johnson</p>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </section>
+    <!-- Footer -->
+    <footer class="d-flex justify-content-between align-items-center">
+        <p class="mb-0">&copy; 2023 Seven Seas Spa. All rights reserved.</p>
+        <div>
+            <a href="https://www.facebook.com" target="_blank" class="text-light me-3">
+                <i class="bi bi-facebook"></i></a>
+            <a href="https://www.twitter.com" target="_blank" class="text-light me-3">
+                <i class="bi bi-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank" class="text-light me-3">
+                <i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com" target="_blank" class="text-light">
+                <i class="bi bi-linkedin"></i></a>
+        </div>
+    </footer>
 
-    </div>
-</main>
 
-<!-- Footer -->
-<footer class="d-flex justify-content-between align-items-center">
-    <p class="mb-0">&copy; 2023 Seven Seas Spa. All rights reserved.</p>
-    <div>
-        <a href="https://www.facebook.com" target="_blank" class="text-light me-3">
-            <i class="bi bi-facebook"></i></a>
-        <a href="https://www.twitter.com" target="_blank" class="text-light me-3">
-            <i class="bi bi-twitter"></i></a>
-        <a href="https://www.instagram.com" target="_blank" class="text-light me-3">
-            <i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com" target="_blank" class="text-light">
-            <i class="bi bi-linkedin"></i></a>
-    </div>
-</footer>
 
-    
-    
 
     <script src="https://fonts.googleapis.com/css2?family=Handle&display=swap"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
