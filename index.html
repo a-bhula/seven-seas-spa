@@ -15,7 +15,12 @@
 
     <style>
         /* Handlee font to all headings */
-        h1, h2, h3, h4, h5, h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: 'Handlee', cursive;
         }
 
@@ -49,28 +54,39 @@
         }
 
         body {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
-            /* .btn {
+        /* .btn {
                 color: #3B2F2F;
             } */
-        
+
         /*
         This CSS rule adds padding to the left and right of the body and main elements
         This ensures that the content is not right up against the viewport on small screens. */
         main {
-        margin: 2rem 0;
+            margin: 2rem 0;
         }
 
         /* Footer styling */
-        footer {
+        .footer {
+            margin-top: auto;
             background-color: #6F4E37;
             color: #FFEBD4;
-            padding: 20px;
-            text-align: center;
+        }
+
+        .footer i.bi {
+            color: #FFEBD4;
+        }
+
+        /* Highlight the active nav link */
+
+        .nav-item.active .nav-link {
+            color: black;
+            font-weight: bolder;
+            /* Make text bold */
         }
 
         /* Service cards styling */
@@ -98,7 +114,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-custom">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white navbar-custom">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="assets/images/seven-seas-spa logo.png" alt="Logo" width="30" height="30">
@@ -114,26 +130,30 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
+                        <a class="nav-link" href="#">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="services.html">Services</a>
+                        <a class="nav-link" href="#">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="#">Contact</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-
     <!-- Hero Section -->
-    <div class="container-fluid hero-section text-center">
-        <h1 class="display-4">Welcome to Seven Seas Spa</h1>
-        <p class="lead">We are dedicated to improving your overall wellbeing.</p>
-        <a href="#" class="btn btn-light btn-lg">Contact Us</a>
-    </div>
+    <header class="hero-section text-center" id="mainContent">
+        <div class="container">
+            <h1 class="display-4">
+                <span class="hero-part-1">Welcome to</span>
+                <span class="hero-part-2">Seven Seas Spa</span>
+            </h1>
+            <p class="lead">We are dedicated to improving your overall wellbeing.</p>
+            <a href="contact.html" class="btn btn-light btn-lg" role="button" tabindex="0">Contact Us</a>
+        </div>
+    </header>
 
 
     <!-- Main Section -->
@@ -259,18 +279,22 @@
     </main>
 
     <!-- Footer -->
-    <footer class="d-flex justify-content-between align-items-center">
-        <p class="mb-0">&copy; 2023 Seven Seas Spa. All rights reserved.</p>
-        <div>
-            <a href="https://www.facebook.com" target="_blank" class="text-light me-3">
-                <i class="bi bi-facebook"></i></a>
-            <a href="https://www.twitter.com" target="_blank" class="text-light me-3">
-                <i class="bi bi-twitter"></i></a>
-            <a href="https://www.instagram.com" target="_blank" class="text-light me-3">
-                <i class="bi bi-instagram"></i></a>
-            <a href="https://www.linkedin.com" target="_blank" class="text-light">
-                <i class="bi bi-linkedin"></i></a>
-        </div>
+    <footer class="footer text-center text-lg-start py-3 mt-auto">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-md-start mb-3 mb-md-0">
+                    <p>© 2022 Seven Seas Spa</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="https://www.facebook.com" target="_blank" class="text-light me-3">
+                        <i class="bi bi-facebook"></i></a>
+                    <a href="https://www.twitter.com" target="_blank" class="text-light me-3">
+                        <i class="bi bi-twitter"></i></a>
+                    <a href="https://www.instagram.com" target="_blank" class="text-light me-3">
+                        <i class="bi bi-instagram"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank" class="text-light">
+                        <i class="bi bi-linkedin"></i></a>
+                </div>
     </footer>
 
 
