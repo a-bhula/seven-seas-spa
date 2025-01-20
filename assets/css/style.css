@@ -1,0 +1,98 @@
+
+
+        /* Handlee font to all headings */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Handlee', cursive;
+        }
+
+        .navbar-custom {
+            color: #3B2F2F;
+        }
+
+        .navbar-custom .nav-link {
+            color: #3B2F2F;
+        }
+
+        .navbar-custom .nav-link.active {
+            font-weight: bold;
+        }
+
+        /* Sticky navbar */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Hero section styling */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/hero-image.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #FFEBD4;
+            padding: 8rem 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* .btn {
+                color: #3B2F2F;
+            } */
+
+        /*
+        This CSS rule adds padding to the left and right of the body and main elements
+        This ensures that the content is not right up against the viewport on small screens. */
+        main {
+            margin: 2rem 0;
+        }
+
+        /* Footer styling */
+        .footer {
+            margin-top: auto;
+            background-color: #6F4E37;
+            color: #FFEBD4;
+        }
+
+        .footer i.bi {
+            color: #FFEBD4;
+        }
+
+        /* Highlight the active nav link */
+
+        .nav-item.active .nav-link {
+            color: black;
+            font-weight: bolder;
+            /* Make text bold */
+        }
+
+        /* Service cards styling */
+        .card {
+            border: none;
+        }
+
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        /* Testimonial images sizing */
+        .testimonial-image {
+            width: 100px;
+            height: 100px;
+        }
+
+        /* Rounded corners on images with the 'rounded-image' class. The px value sets roundness */
+        .rounded-image {
+            border-radius: 15px;
+
+        }
