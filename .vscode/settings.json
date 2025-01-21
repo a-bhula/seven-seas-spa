@@ -15,4 +15,5 @@
    "files.autoSave": "afterDelay",
    "workbench.colorTheme": "Visual Studio Light",
    "terminal.integrated.gpuAcceleration": "canvas",
+   "liveServer.settings.port": 5501,
 }
